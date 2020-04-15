@@ -29,3 +29,39 @@
 ion-content ion-toolbar {
   --background: translucent;
 }
+.slides-wrapper {
+  height: 100%;
+}
+.swiper-slide {
+  overflow-y: scroll;    
+  display: block;    
+}
+#map{
+  height: 85%;
+}
+.leaflet-marker-pane > * {
+  -webkit-transition: transform .3s linear;
+  -moz-transition: transform .3s linear;
+  -o-transition: transform .3s linear;
+  -ms-transition: transform .3s linear;
+  transition: transform .3s linear;
+}
+
+.autocomplete-address-list {
+  width: 100% ;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 58px;
+  left: 0;
+  z-index: 1010;
+  max-height: 200px;
+  overflow-y: auto;
+
+  ion-item {
+    font-size: 14px;
+
+    ion-icon {
+      margin-inline-end: 16px;
+    }
+  }
+}

@@ -1,5 +1,7 @@
 {
   "name": "ionic-leaflet",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "leaflet-angular": [
+        "dist/leaflet-angular"
+      ],
+      "leaflet-angular/*": [
+        "dist/leaflet-angular/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

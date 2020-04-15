@@ -4,17 +4,42 @@
       Blank
     </ion-title>
   </ion-toolbar>
+  <ion-toolbar color="themeSuccess">
+    <ion-segment class="segment-wrapper" (ionChange)="segmentChanged($event)" [(ngModel)]="segment">
+      <ion-segment-button value="0">
+        <ion-label>Location</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="1">
+        <ion-label>Details</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="2">
+        <ion-label>Photos</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content>
+  <ion-slides class="slides-wrapper" #slides (ionSlideDidChange)="slideChanged()" >
+    <ion-slide >
+      <ion-searchbar placeholder="Search Here" (ionInput)="search()" [(ngModel)]="searchKey"></ion-searchbar>
+      <ion-list *ngIf="places.length > 0" class="autocomplete-address-list common-bg-light" lines="full">
+    
+        <div class="list autolist">
+          <ion-item tappable (click)="onClickPickAddress(place.lat, place.lon)" class="item" *ngFor="let place of places">
+            <ion-icon name="location-outline" slot="start"></ion-icon>
+            {{place.display_name}}</ion-item>
+        </div>
+    
+      </ion-list>
+      <div id="map"></div>  
+    </ion-slide>
+    <ion-slide>
+     Address Component is : {{addressComponent | json}}
+    </ion-slide>
+    <ion-slide>
+      C
+    </ion-slide>
+  </ion-slides>
+  
 </ion-content>
