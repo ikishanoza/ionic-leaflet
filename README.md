@@ -11,5 +11,5 @@ Thanks Cheers!!
 
 
 # Demo
-https://ionic-leaflet-map.firebaseapp.com/home
+https://ionic-leaflet-map.firebaseapp.com/
 
