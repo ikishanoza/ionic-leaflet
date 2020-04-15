@@ -57,7 +57,7 @@ export class HomePage {
   loadMap() {
     this.map = L.map('map').fitWorld();
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: 'RealEstate',
+      attribution: 'contributor',
       maxZoom: 30
     }).addTo(this.map);
     // For Web
